@@ -407,6 +407,7 @@
     <Content Include="Scripts\jquery-2.0.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContinuousIntegrationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
