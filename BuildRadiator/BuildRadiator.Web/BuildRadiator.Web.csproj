@@ -401,8 +401,10 @@
     <Compile Include="Configuration\HttpResourceConfiguration.cs" />
     <Compile Include="Configuration\IHttpResourceConfigurationFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadiatorModule.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\radiator.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
