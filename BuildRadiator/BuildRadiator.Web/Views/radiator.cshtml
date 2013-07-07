@@ -1,9 +1,48 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Build Radiator</title>
-</head>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app>
+    <head>
+        <meta charset="utf-8" />
+        <title>Build Radiator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="~/Content/bootstrap.min.css" type="text/css" />
+        <script src="~/Scripts/angular.min.js" type="text/javascript"></script>
+        <script src="~/Scripts/Controllers/BugTrackingController.js" type="text/javascript"></script>
+        <style>
+            html, body { height: 100%; }
+            #wrap { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -60px; }
+            #push, footer { height: 60px; }
+            @@media(max-width: 767px) {
+                footer { margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; }
+            }
+            </style>
+        <link rel="stylesheet" href="~/Content/bootstrap-responsive.min.css" type="text/css" />
+    </head>
     <body>
-        <h1>This is the main radiator page!</h1>
+        <div id="wrap">
+            <div class="container-fluid">
+                <h1>This is the main radiator page!</h1>
+                <div ng-controller="BugTrackingController">
+                    Open bugs by project:
+                    <ul>
+                        <li ng-repeat="project in projects">
+                            <span class="project-name">{{project.name}}</span>: {{project.openIssueCount}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="push"></div>
+        </div>
+        <footer>
+            <div class="container-fluid">
+                <p class="muted credit">
+                    Built with <a href="http://twitter.github.io/bootstrap">Twitter Bootstrap</a>, 
+                    <a href="http://angularjs.org/">AngularJS</a>,
+                    <a href="http://nancyfx.org/">NancyFx</a>,
+                    <a href="https://www.nuget.org/packages/TeamCitySharp">TeamCitySharp</a> and
+                    <a href="https://www.nuget.org/packages/Atlassian.SDK/3.0.0-beta1">Atlassian.SDK</a>.
+                    Open-sourced under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+            </div>
+        </footer>
     </body>
 </html>
