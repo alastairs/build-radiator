@@ -398,6 +398,8 @@
     <Content Include="Scripts\jquery-2.0.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\HttpResourceConfiguration.cs" />
+    <Compile Include="Configuration\IHttpResourceConfigurationFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
